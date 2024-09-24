@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP Table</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="pipe.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+<img src="images/back.jpg" alt="">
+<p class="tcp">TCP Table</p>
+
+<div class="icon-container">
+    <a href="mainpage.html">
+    <i class="fa-solid fa-house" style="color: #484847;"></i>
+    </a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>TCP Connection State</th>
+        <th>TCP Connection LocalAdd</th>
+        <th>TCP ConnLocal Port</th>
+        <th>TCP ConnRem Add</th>
+        <th>TCP ConnRem Port</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        getSnmpData("tcp");
+    });
+</script>
+</body>
+</html>

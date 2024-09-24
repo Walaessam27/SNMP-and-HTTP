@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNMP Table</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="pipe.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      background-color: gray;
+    }
+    th, td {
+      /*padding: 10px;*/
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<img src="images/back1.jpg" alt="">
+<p class="tcp">Statistics</p>
+
+<div class="icon-container">
+
+  <a href="mainpage.html">
+    <i class="fa-solid fa-house" style="color: #484847;"></i>
+  </a>
+</div>
+
+<table>
+  <tr>
+    <td colspan="3"><center>Method 1: By Get</center> </td>
+    <td colspan="1"></td>
+    <td colspan="3"><center>Method 2: By Walk</center> </td>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Value</td>
+    <td></td>
+    <td >Item #</td>
+    <td>Name</td>
+    <td>Value</td>
+  </tr>
+  <tbody id="table-body">
+  </tbody>
+
+</table>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    loop(" ");
+  });
+  for (var i = 0; i < GetArray.length; i++) {
+    document.write("Element " + (i + 1) + ": " + GetArray[i] + "<br>");
+  }
+  for (var i = 0; i < $WalkArray.length; i++) {
+    document.write("Element " + (i + 1) + ": " + $WalkArray[i] + "<br>");
+  }
+</script>
+</body>
+</html>

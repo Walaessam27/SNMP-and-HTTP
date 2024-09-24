@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="pipe.js" defer></script>
+    <title>System</title>
+</head>
+<body>
+<img src="images/system.png" alt="">
+<p class="tcp"></p>
+
+<div class="icon-container">
+    <a href="mainpage.html">
+        <i class="fa-solid fa-house" style="color: #484847;"></i>
+    </a>
+</div>
+<input type="text"  id="obj" name="obj" class="obj" value="Non" readonly>
+<input type="text"  id="des"name="des" class="des" value="Non" readonly>
+<input type="text" id="time" name="time" class="time" value="Non" readonly>
+
+<input type="text" id="contact" name="contact"   class="cont">
+<input type="text" id="name"  name="name" class="name" >
+<input type="text" id="location" name="location" class="loc">
+
+
+
+<button id="saveButton1" class="save1" onclick="setSnmpData('name')">Save</button>
+<button id="saveButton2" class="save2" onclick="setSnmpData('loc')">Save</button>
+<button id="saveButton3" class="save3" onclick="setSnmpData('cont')">Save</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        getSnmpData("system");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Example</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="pipe.js" defer></script>
+</head>
+<body>
+<img src="images/back1.jpg" alt="">
+<p class="tcp">ARP Table</p>
+
+<div class="icon-container">
+  <a href="mainpage.html">
+    <i class="fa-solid fa-house" style="color: #484847;"></i>
+  </a>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Interface index</th>
+    <th>Mac Address</th>
+    <th>IP Address</th>
+    <th>State</th>
+  </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+</table>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    getSnmpData("arp");
+  });
+</script>
+</body>
+</html>
